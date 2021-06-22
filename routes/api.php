@@ -17,12 +17,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('users/{id}', 'ArticleController@index');
+Route::get('articles', 'ArticleController@index');
 
-Route::get('users/{id}', 'ArticleController@show');
+Route::get('article/{id}', 'ArticleController@show');
 
-Route::post('users/{id}', 'ArticleController@store');
+Route::post('article', 'ArticleController@store');
 
-Route::put('users/{id}', 'ArticleController@update');
+Route::put('article', 'ArticleController@update');
 
-Route::delete('users/{id}', 'ArticleController@destroy');
+Route::delete('article/{id}', 'ArticleController@destroy');
